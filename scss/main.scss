@@ -1,0 +1,91 @@
+// Imports
+@import 'base';
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Indie+Flower&display=swap');
+
+//Variables
+$color-primary: #bd1d22;
+$color-secondary:lighten($color-primary, 60%);
+$color-nav:rgb(221, 241, 235);
+$complement: complement($color-primary);
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:$color-primary ;
+    font-family: 'Comforter Brush', cursive;
+    font-family: 'Indie Flower', cursive;
+    
+   
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    background-color: $complement;
+    padding:1rem;
+    font-size:small;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transform: skewy(12deg);
+  
+
+    li{
+        display: inline-block;
+        padding: 12px;
+   
+       
+    }
+    a{
+        text-decoration: none;
+        color: $color-secondary;
+        transition: font-size 1s ease-in-out 0.1s;
+        
+
+        &:hover{
+            color: rgb(19, 57, 107);
+            font-size: 1rem;
+            
+        }
+    }
+
+}
+
+
+
+
+main, section, .main-sidebar{
+    padding: 1rem;
+    
+
+    section, .main-sidebar{
+        margin-bottom: 1rem;
+        background-color: $color-nav;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+       
+        transition: background-color, transform 1s ease-in-out 0.1s;
+    }
+    section:hover,
+    .main-sidebar:hover {
+        background-color: $complement;
+        color: white;
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+
+}
+
+
+.wrapper{
+    min-height: calc(100vh - 22px);
+}
+
+footer{
+    text-align: center;
+ 
+}
